@@ -1,8 +1,9 @@
-import styled from 'styled-components';
-import { Card } from '../../atoms/card/Card';
-import { UserIconWithName } from '../../molecules/user/UserIconWIthName';
+import styled from "styled-components";
+import { Card } from "../../atoms/card/Card";
+import { UserIconWithName } from "../../molecules/user/UserIconWIthName";
+import { memo } from "react";
 
-export const UserCard = ({ user }) => {
+export const UserCard = memo(({ user }) => {
   return (
     <Card>
       <UserIconWithName image={user.image} name={user.name} />
@@ -18,17 +19,17 @@ export const UserCard = ({ user }) => {
       </SDl>
     </Card>
   );
-};
+});
 
 const SDl = styled.dl`
-text-align:left;
-margin-bottom:0px;
-dt {
-  float:left;
-}
-dd {
-  padding-left:32px;
-  padding-bottom:8px;
-  overflow-wrap:break-word;
-}
+  text-align: left;
+  margin-bottom: 0px;
+  dt {
+    float: left;
+  }
+  dd {
+    padding-left: 32px;
+    padding-bottom: 8px;
+    overflow-wrap: break-word;
+  }
 `;

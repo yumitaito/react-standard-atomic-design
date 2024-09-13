@@ -1,14 +1,14 @@
-import styled from 'styled-components';
-import { BaseButton } from './BaseButton';
+import styled from "styled-components";
+import { BaseButton } from "./BaseButton";
 
-export const SecandaryButton = ({ children }) => {
+export const SecandaryButton = ({ children, onClick }) => {
   return (
     <>
-      <Sbutton>{children}</Sbutton>
+      <Sbutton onClick={onClick}>{children}</Sbutton>
     </>
   );
 };
 
 const Sbutton = styled(BaseButton)`
-background-color:#11999e;
+  background-color: #11999e;
 `;
